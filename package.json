@@ -1,0 +1,64 @@
+{
+  "name": "minimalist-react-utils",
+  "version": "0.0.0",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/minimalist-react-utils.cjs",
+      "import": "./dist/minimalist-react-utils.es.js"
+    },
+    "./styles.css": {
+      "require": "./dist/styles.css",
+      "default": "./dist/styles.css"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "email": "lio.nguyen.dev@gmail.com",
+  "homepage": "https://github.com/LioNguyen/project-minimalist-react-utils",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LioNguyen/project-minimalist-react-utils"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0",
+    "dompurify": "^3.0.6",
+    "lodash": "^4.17.21",
+    "qs": "^6.11.2",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@types/dompurify": "^3.0.4",
+    "@types/lodash": "^4.14.201",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.0",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^8.3.0",
+    "concurrently": "^7.6.0",
+    "postcss": "^8.4.20",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.0-rc.5",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0",
+    "vite-plugin-dts": "^1.7.1",
+    "vite-tsconfig-paths": "^4.0.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}
