@@ -1,12 +1,12 @@
 {
-  "name": "minimalist-react-utils",
+  "name": "react-minimalist-utils",
   "version": "0.0.0",
   "type": "module",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/minimalist-react-utils.cjs",
-      "import": "./dist/minimalist-react-utils.es.js"
+      "require": "./dist/react-minimalist-utils.cjs",
+      "import": "./dist/react-minimalist-utils.es.js"
     },
     "./styles.css": {
       "require": "./dist/styles.css",
@@ -17,10 +17,10 @@
     "dist"
   ],
   "email": "lio.nguyen.dev@gmail.com",
-  "homepage": "https://github.com/LioNguyen/project-minimalist-react-utils",
+  "homepage": "https://github.com/LioNguyen/project-react-minimalist-utils",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LioNguyen/project-minimalist-react-utils"
+    "url": "https://github.com/LioNguyen/project-react-minimalist-utils"
   },
   "scripts": {
     "dev": "vite",

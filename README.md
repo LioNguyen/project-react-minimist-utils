@@ -7,7 +7,7 @@
 
 <b>Table of Contents</b>
 
-- [Minimalist React Utils](#minimalist-react-utils)
+- [Minimalist React Utils](#react-minimalist-utils)
   - [Installation](#installation)
   - [Playground](#playground)
   - [Constants](#constants)
@@ -60,7 +60,7 @@
 ## Installation
 
 ```bash
-npm i minimalist-react-utils
+npm i react-minimalist-utils
 ```
 
 Some extra essential packages:
@@ -87,7 +87,7 @@ npm i react-router-dom
 ### EMAIL_REGEX
 
 ```js
-import { CONSTANTS } from "minimalist-react-utils";
+import { CONSTANTS } from "react-minimalist-utils";
 
 const regex = CONSTANTS.EMAIL_REGEX;
 
@@ -97,7 +97,7 @@ const regex = CONSTANTS.EMAIL_REGEX;
 ### HEX_COLOR_REGEX
 
 ```js
-import { CONSTANTS } from "minimalist-react-utils";
+import { CONSTANTS } from "react-minimalist-utils";
 
 const regex = CONSTANTS.HEX_COLOR_REGEX;
 
@@ -107,7 +107,7 @@ const regex = CONSTANTS.HEX_COLOR_REGEX;
 ### HTTP_HTTPS_REGEX
 
 ```js
-import { CONSTANTS } from "minimalist-react-utils";
+import { CONSTANTS } from "react-minimalist-utils";
 
 const regex = CONSTANTS.HTTP_HTTPS_REGEX;
 
@@ -117,7 +117,7 @@ const regex = CONSTANTS.HTTP_HTTPS_REGEX;
 ### PASSWORD_REGEX
 
 ```js
-import { CONSTANTS } from "minimalist-react-utils";
+import { CONSTANTS } from "react-minimalist-utils";
 
 const regex = CONSTANTS.PASSWORD_REGEX;
 
@@ -127,7 +127,7 @@ const regex = CONSTANTS.PASSWORD_REGEX;
 ### UUID_REGEX
 
 ```js
-import { CONSTANTS } from "minimalist-react-utils";
+import { CONSTANTS } from "react-minimalist-utils";
 
 const regex = CONSTANTS.UUID_REGEX;
 
@@ -137,7 +137,7 @@ const regex = CONSTANTS.UUID_REGEX;
 ### VIETNAMESE_PHONE_NUMBER_REGEX
 
 ```js
-import { CONSTANTS } from "minimalist-react-utils";
+import { CONSTANTS } from "react-minimalist-utils";
 
 const regex = CONSTANTS.VIETNAMESE_PHONE_NUMBER_REGEX;
 
@@ -149,25 +149,25 @@ const regex = CONSTANTS.VIETNAMESE_PHONE_NUMBER_REGEX;
 ### [clsx](https://www.npmjs.com/package/clsx)
 
 ```js
-import { Clsx, ClsxType } from "minimalist-react-utils";
+import { Clsx, ClsxType } from "react-minimalist-utils";
 ```
 
 ### [dompurify](https://www.npmjs.com/package/dompurify)
 
 ```js
-import { dompurify, DOMPurify, DompurifyType } from "minimalist-react-utils";
+import { dompurify, DOMPurify, DompurifyType } from "react-minimalist-utils";
 ```
 
 ### [lodash](https://www.npmjs.com/package/lodash)
 
 ```js
-import { _, Lodash, LodashType } from "minimalist-react-utils";
+import { _, Lodash, LodashType } from "react-minimalist-utils";
 ```
 
 ### [qs](https://www.npmjs.com/package/qs)
 
 ```js
-import { qs, qsType } from "minimalist-react-utils";
+import { qs, qsType } from "react-minimalist-utils";
 ```
 
 ## Hooks
@@ -177,7 +177,7 @@ import { qs, qsType } from "minimalist-react-utils";
 #### useArray
 
 ```js
-import { Hooks } from "minimalist-react-utils";
+import { Hooks } from "react-minimalist-utils";
 
 const { array, set, push, remove, filter, update, clear } =
   Hooks.Array.useArray([1, 2, 3, 4, 5, 6]);
@@ -188,7 +188,7 @@ const { array, set, push, remove, filter, update, clear } =
 #### useToggle
 
 ```js
-import { Hooks } from "minimalist-react-utils";
+import { Hooks } from "react-minimalist-utils";
 
 const [value, toggleValue] = Hooks.Data.useToggle(false);
 
@@ -206,7 +206,7 @@ return (
 #### useDeviceDetect
 
 ```js
-import { Hooks } from "minimalist-react-utils";
+import { Hooks } from "react-minimalist-utils";
 
 const { isMobile } = Hooks.Device.useDeviceDetect();
 ```
@@ -216,7 +216,7 @@ const { isMobile } = Hooks.Device.useDeviceDetect();
 #### useElementOnScreen
 
 ```js
-import { Hooks } from "minimalist-react-utils";
+import { Hooks } from "react-minimalist-utils";
 
 const buttonRef = useRef();
 const isVisible = Hooks.Dom.useElementOnScreen(buttonRef);
@@ -225,7 +225,7 @@ const isVisible = Hooks.Dom.useElementOnScreen(buttonRef);
 #### useEventListener
 
 ```js
-import { Hooks } from "minimalist-react-utils";
+import { Hooks } from "react-minimalist-utils";
 
 Hooks.Dom.useEventListener("scroll", callback);
 ```
@@ -235,7 +235,7 @@ Hooks.Dom.useEventListener("scroll", callback);
 #### useLocalStorage, useSessionStorage
 
 ```js
-import { Hooks } from "minimalist-react-utils";
+import { Hooks } from "react-minimalist-utils";
 
 const [name, setName, removeName] = Hooks.Storage.useSessionStorage(
   "name",
@@ -249,7 +249,7 @@ const [age, setAge, removeAge] = Hooks.Storage.useLocalStorage("age", 26);
 #### useScrolling
 
 ```js
-import { Hooks } from "minimalist-react-utils";
+import { Hooks } from "react-minimalist-utils";
 
 const isScrolling = Hooks.Window.useScrolling();
 ```
@@ -257,7 +257,7 @@ const isScrolling = Hooks.Window.useScrolling();
 #### useScrollTo
 
 ```js
-import { Hooks } from "minimalist-react-utils";
+import { Hooks } from "react-minimalist-utils";
 
 const buttonRef = useRef();
 const { scrollToElement, scrollTo } = Hooks.Window.useScrollTo();
@@ -271,7 +271,7 @@ scrollTo();
 #### useWindowSize
 
 ```js
-import { Hooks } from "minimalist-react-utils";
+import { Hooks } from "react-minimalist-utils";
 
 const { width, height } = Hooks.Window.useWindowSize();
 ```
@@ -283,7 +283,7 @@ const { width, height } = Hooks.Window.useWindowSize();
 #### fetchData
 
 ```js
-import { Utils } from "minimalist-react-utils";
+import { Utils } from "react-minimalist-utils";
 
 Utils.Api.fetchData({
   requestCallback: async () => {
@@ -313,7 +313,7 @@ Utils.Api.fetchData({
 #### groupListByField
 
 ```js
-import { Utils } from "minimalist-react-utils";
+import { Utils } from "react-minimalist-utils";
 
 const list = Utils.Array.groupListByField({
   list: mockList,
@@ -326,7 +326,7 @@ const list = Utils.Array.groupListByField({
 - By default, sortType is "asc"
 
 ```js
-import { Utils } from "minimalist-react-utils";
+import { Utils } from "react-minimalist-utils";
 
 const data = Utils.Array.sortList({
   list: mockList,
@@ -340,7 +340,7 @@ const data = Utils.Array.sortList({
 #### downloadFile
 
 ```js
-import { Utils } from "minimalist-react-utils";
+import { Utils } from "react-minimalist-utils";
 
 const { downloadFile, DOWNLOAD_LINK_SAMPLE } = Utils.Data;
 downloadFile(DOWNLOAD_LINK_SAMPLE);
@@ -353,7 +353,7 @@ downloadFile(DOWNLOAD_LINK_SAMPLE);
 #### numberWithComma
 
 ```js
-import { Utils } from "minimalist-react-utils";
+import { Utils } from "react-minimalist-utils";
 
 const formattedNumber = Utils.Number.numberWithComma(55250.2);
 
@@ -365,7 +365,7 @@ const formattedNumber = Utils.Number.numberWithComma(55250.2);
 #### lazyLoad
 
 ```js
-import { Utils } from "minimalist-react-utils";
+import { Utils } from "react-minimalist-utils";
 
 const Button = Utils.lazyLoad(
   () => import("./Button"),
@@ -378,7 +378,7 @@ const Button = Utils.lazyLoad(
 #### checkWordCount
 
 ```js
-import { Utils } from "minimalist-react-utils";
+import { Utils } from "react-minimalist-utils";
 
 const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 const isTextValid = Utils.String.checkWordCount(text, 5, 30);
@@ -389,7 +389,7 @@ const isTextValid = Utils.String.checkWordCount(text, 5, 30);
 #### convertHexToRgb
 
 ```js
-import { Utils } from "minimalist-react-utils";
+import { Utils } from "react-minimalist-utils";
 
 const formattedNumber = Utils.String.numberWithComma(55250.2);
 
@@ -399,7 +399,7 @@ const formattedNumber = Utils.String.numberWithComma(55250.2);
 #### convertStyleObjectToString
 
 ```js
-import { Utils } from "minimalist-react-utils";
+import { Utils } from "react-minimalist-utils";
 
 const styleObject = {
   color: "#000",
@@ -413,7 +413,7 @@ const cssString = Utils.String.convertStyleObjectToString(styleObject);
 #### sanitizeHTML
 
 ```js
-import { Utils } from "minimalist-react-utils";
+import { Utils } from "react-minimalist-utils";
 
 const dirtyHTML = <p>This is dirty HTML</p>;
 const htmlText = Utils.String.sanitizeHTML(dirtyHTML);
@@ -424,7 +424,7 @@ const htmlText = Utils.String.sanitizeHTML(dirtyHTML);
 #### trimText
 
 ```js
-import { Utils } from "minimalist-react-utils";
+import { Utils } from "react-minimalist-utils";
 
 const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 const newText = Utils.String.trimText(text, 50);
