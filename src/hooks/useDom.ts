@@ -2,7 +2,7 @@ import { MutableRefObject, useEffect, useRef, useState } from "react";
 
 /**
  * @returns boolean
- * @description helpful when you want to track when a specific DOM element comes into view or goes out of sight
+ * @description checks whether a specific DOM element comes into view or goes out of sight
  */
 export function useElementOnScreen(
   ref: MutableRefObject<any>,

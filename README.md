@@ -1,13 +1,20 @@
-# Minimalist React Utils
+# React Utils
 
-- A bundle of essential package and utils to build a web application
-- React + TypeScript + Vite
+[![npm](https://img.shields.io/npm/v/react-utils?color=%23ff00dd)](https://www.npmjs.com/package/react-utils)
+[![npm downloads](https://img.shields.io/npm/dw/react-utils)](https://www.npmjs.com/package/react-utils)
+![types](https://img.shields.io/npm/types/react-utils)
+
+🚀 `react-utils` is a bundle of essential packages and utils in Typescript for a React application
+
+`React + TypeScript + Vite`
+
+Older version [minimist-react-library](https://www.npmjs.com/package/minimist-react-library)
 
 ---
 
 <b>Table of Contents</b>
 
-- [Minimalist React Utils](#react-minimalist-utils)
+- [React Utils](#react-utils)
   - [Installation](#installation)
   - [Playground](#playground)
   - [Constants](#constants)
@@ -23,8 +30,6 @@
     - [lodash](#lodash)
     - [qs](#qs)
   - [Hooks](#hooks)
-    - [Array](#array)
-      - [useArray](#usearray)
     - [Data](#data)
       - [useToggle](#usetoggle)
     - [Device](#device)
@@ -41,7 +46,8 @@
   - [Utils:](#utils)
     - [Api](#api)
       - [fetchData](#fetchdata)
-    - [Array](#array-1)
+    - [Array](#array)
+      - [handleArray](#handlearray)
       - [groupListByField](#grouplistbyfield)
       - [sortList](#sortlist)
     - [Data](#data-1)
@@ -60,7 +66,7 @@
 ## Installation
 
 ```bash
-npm i react-minimalist-utils
+npm i react-utils
 ```
 
 Some extra essential packages:
@@ -78,16 +84,17 @@ npm i react-router-dom
 
 - [Code Playground](https://playcode.io)
 - [Regex Playground](https://regex101.com/)
-- [Lorem](https://loremipsum.io/)
 - [Mock API](https://mockapi.io/)
 - [Free Test Data](https://freetestdata.com/)
+- [Generate data tool](https://generatedata.com/)
+- [Lorem](https://loremipsum.io/)
 
 ## Constants
 
 ### EMAIL_REGEX
 
 ```js
-import { CONSTANTS } from "react-minimalist-utils";
+import { CONSTANTS } from "react-utils";
 
 const regex = CONSTANTS.EMAIL_REGEX;
 
@@ -97,7 +104,7 @@ const regex = CONSTANTS.EMAIL_REGEX;
 ### HEX_COLOR_REGEX
 
 ```js
-import { CONSTANTS } from "react-minimalist-utils";
+import { CONSTANTS } from "react-utils";
 
 const regex = CONSTANTS.HEX_COLOR_REGEX;
 
@@ -107,7 +114,7 @@ const regex = CONSTANTS.HEX_COLOR_REGEX;
 ### HTTP_HTTPS_REGEX
 
 ```js
-import { CONSTANTS } from "react-minimalist-utils";
+import { CONSTANTS } from "react-utils";
 
 const regex = CONSTANTS.HTTP_HTTPS_REGEX;
 
@@ -117,7 +124,7 @@ const regex = CONSTANTS.HTTP_HTTPS_REGEX;
 ### PASSWORD_REGEX
 
 ```js
-import { CONSTANTS } from "react-minimalist-utils";
+import { CONSTANTS } from "react-utils";
 
 const regex = CONSTANTS.PASSWORD_REGEX;
 
@@ -127,7 +134,7 @@ const regex = CONSTANTS.PASSWORD_REGEX;
 ### UUID_REGEX
 
 ```js
-import { CONSTANTS } from "react-minimalist-utils";
+import { CONSTANTS } from "react-utils";
 
 const regex = CONSTANTS.UUID_REGEX;
 
@@ -137,7 +144,7 @@ const regex = CONSTANTS.UUID_REGEX;
 ### VIETNAMESE_PHONE_NUMBER_REGEX
 
 ```js
-import { CONSTANTS } from "react-minimalist-utils";
+import { CONSTANTS } from "react-utils";
 
 const regex = CONSTANTS.VIETNAMESE_PHONE_NUMBER_REGEX;
 
@@ -149,46 +156,37 @@ const regex = CONSTANTS.VIETNAMESE_PHONE_NUMBER_REGEX;
 ### [clsx](https://www.npmjs.com/package/clsx)
 
 ```js
-import { Clsx, ClsxType } from "react-minimalist-utils";
+import { Clsx, ClsxType } from "react-utils";
 ```
 
 ### [dompurify](https://www.npmjs.com/package/dompurify)
 
 ```js
-import { dompurify, DOMPurify, DompurifyType } from "react-minimalist-utils";
+import { dompurify, DOMPurify, DompurifyType } from "react-utils";
 ```
 
 ### [lodash](https://www.npmjs.com/package/lodash)
 
 ```js
-import { _, Lodash, LodashType } from "react-minimalist-utils";
+import { _, Lodash, LodashType } from "react-utils";
 ```
 
 ### [qs](https://www.npmjs.com/package/qs)
 
 ```js
-import { qs, qsType } from "react-minimalist-utils";
+import { qs, qsType } from "react-utils";
 ```
 
 ## Hooks
-
-### Array
-
-#### useArray
-
-```js
-import { Hooks } from "react-minimalist-utils";
-
-const { array, set, push, remove, filter, update, clear } =
-  Hooks.Array.useArray([1, 2, 3, 4, 5, 6]);
-```
 
 ### Data
 
 #### useToggle
 
+`useToggle` allows a component to toggle a value between true and false
+
 ```js
-import { Hooks } from "react-minimalist-utils";
+import { Hooks } from "react-utils";
 
 const [value, toggleValue] = Hooks.Data.useToggle(false);
 
@@ -205,8 +203,10 @@ return (
 
 #### useDeviceDetect
 
+`useDeviceDetect` detects whether your device is mobile or not
+
 ```js
-import { Hooks } from "react-minimalist-utils";
+import { Hooks } from "react-utils";
 
 const { isMobile } = Hooks.Device.useDeviceDetect();
 ```
@@ -215,8 +215,10 @@ const { isMobile } = Hooks.Device.useDeviceDetect();
 
 #### useElementOnScreen
 
+`useElementOnScreen` checks whether a specific DOM element comes into view or goes out of sight
+
 ```js
-import { Hooks } from "react-minimalist-utils";
+import { Hooks } from "react-utils";
 
 const buttonRef = useRef();
 const isVisible = Hooks.Dom.useElementOnScreen(buttonRef);
@@ -224,8 +226,10 @@ const isVisible = Hooks.Dom.useElementOnScreen(buttonRef);
 
 #### useEventListener
 
+`useEventListener` helpful in situations where you want to handle events
+
 ```js
-import { Hooks } from "react-minimalist-utils";
+import { Hooks } from "react-utils";
 
 Hooks.Dom.useEventListener("scroll", callback);
 ```
@@ -234,8 +238,10 @@ Hooks.Dom.useEventListener("scroll", callback);
 
 #### useLocalStorage, useSessionStorage
 
+`useLocalStorage, useSessionStorage` helps to store data in Local Storage or Session Storage
+
 ```js
-import { Hooks } from "react-minimalist-utils";
+import { Hooks } from "react-utils";
 
 const [name, setName, removeName] = Hooks.Storage.useSessionStorage(
   "name",
@@ -248,30 +254,39 @@ const [age, setAge, removeAge] = Hooks.Storage.useLocalStorage("age", 26);
 
 #### useScrolling
 
+`useScrolling` checks whether window is scrolling or not
+
 ```js
-import { Hooks } from "react-minimalist-utils";
+import { Hooks } from "react-utils";
 
 const isScrolling = Hooks.Window.useScrolling();
 ```
 
 #### useScrollTo
 
+`useScrollTo` helps scroll to element or specific position
+
 ```js
-import { Hooks } from "react-minimalist-utils";
+import { Hooks } from "react-utils";
 
 const buttonRef = useRef();
-const { scrollToElement, scrollTo } = Hooks.Window.useScrollTo();
+const { scrollToElement, scrollTo, scrollToTop, scrollToBottom } =
+  Hooks.Window.useScrollTo();
 
 scrollToElement(buttonRef);
 
 // Default is scroll to top
-scrollTo();
+scrollTo(1000, 0);
+scrollToTop();
+scrollToBottom();
 ```
 
 #### useWindowSize
 
+`useWindowSize` helps to get current window's height and width
+
 ```js
-import { Hooks } from "react-minimalist-utils";
+import { Hooks } from "react-utils";
 
 const { width, height } = Hooks.Window.useWindowSize();
 ```
@@ -282,8 +297,10 @@ const { width, height } = Hooks.Window.useWindowSize();
 
 #### fetchData
 
+`fetchData` utilizes fetch data method from api
+
 ```js
-import { Utils } from "react-minimalist-utils";
+import { Utils } from "react-utils";
 
 Utils.Api.fetchData({
   requestCallback: async () => {
@@ -308,12 +325,27 @@ Utils.Api.fetchData({
 
 ### Array
 
-- [Generate data tool](https://generatedata.com/)
+#### handleArray
+
+`handleArray` helps to push, filter, update, remove, clear a list
+
+```js
+import { Utils } from "react-utils";
+
+// or Utils.handleArray
+const arr = [1, 2, 3];
+const { push, filter, update, remove, clear } = Utils.Array.handleArray(arr);
+
+push(4); // -> arr = [1,2,3,4,5]
+clear(); // -> arr = []
+```
 
 #### groupListByField
 
+`groupListByField` handle group list by specific field
+
 ```js
-import { Utils } from "react-minimalist-utils";
+import { Utils } from "react-utils";
 
 const list = Utils.Array.groupListByField({
   list: mockList,
@@ -323,15 +355,15 @@ const list = Utils.Array.groupListByField({
 
 #### sortList
 
-- By default, sortType is "asc"
+`sortList` only works on number list, string list & object list
 
 ```js
-import { Utils } from "react-minimalist-utils";
+import { Utils } from "react-utils";
 
 const data = Utils.Array.sortList({
   list: mockList,
   field: "name",
-  sortType: "desc",
+  sortType: "desc", // default is "asc"
 });
 ```
 
@@ -339,21 +371,24 @@ const data = Utils.Array.sortList({
 
 #### downloadFile
 
+`downloadFile` handles download a file from specific url
+
 ```js
-import { Utils } from "react-minimalist-utils";
+import { Utils } from "react-utils";
 
 const { downloadFile, DOWNLOAD_LINK_SAMPLE } = Utils.Data;
-downloadFile(DOWNLOAD_LINK_SAMPLE);
 
-// 55,250.20
+downloadFile(DOWNLOAD_LINK_SAMPLE);
 ```
 
 ### Number
 
 #### numberWithComma
 
+`numberWithComma` formats number with dot and comma
+
 ```js
-import { Utils } from "react-minimalist-utils";
+import { Utils } from "react-utils";
 
 const formattedNumber = Utils.Number.numberWithComma(55250.2);
 
@@ -364,8 +399,11 @@ const formattedNumber = Utils.Number.numberWithComma(55250.2);
 
 #### lazyLoad
 
+`lazyLoad` creates lazy for app components
+
 ```js
-import { Utils } from "react-minimalist-utils";
+// ./Button/index.ts
+import { Utils } from "react-utils";
 
 const Button = Utils.lazyLoad(
   () => import("./Button"),
@@ -373,12 +411,25 @@ const Button = Utils.lazyLoad(
 );
 ```
 
+```js
+// App.js
+import { Button } from "./Button"
+
+export const App = () => {
+  return <div>
+    <Button>Submit<Button>
+  </div>
+}
+```
+
 ### String
 
 #### checkWordCount
 
+`checkWordCount` checks whether text length meets requirement or not
+
 ```js
-import { Utils } from "react-minimalist-utils";
+import { Utils } from "react-utils";
 
 const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 const isTextValid = Utils.String.checkWordCount(text, 5, 30);
@@ -388,8 +439,10 @@ const isTextValid = Utils.String.checkWordCount(text, 5, 30);
 
 #### convertHexToRgb
 
+`convertHexToRgb` converts HEX to RGBA color
+
 ```js
-import { Utils } from "react-minimalist-utils";
+import { Utils } from "react-utils";
 
 const formattedNumber = Utils.String.numberWithComma(55250.2);
 
@@ -398,8 +451,10 @@ const formattedNumber = Utils.String.numberWithComma(55250.2);
 
 #### convertStyleObjectToString
 
+`convertStyleObjectToString` converts css object into css string to use in styled-components template string
+
 ```js
-import { Utils } from "react-minimalist-utils";
+import { Utils } from "react-utils";
 
 const styleObject = {
   color: "#000",
@@ -412,8 +467,10 @@ const cssString = Utils.String.convertStyleObjectToString(styleObject);
 
 #### sanitizeHTML
 
+`sanitizeHTML` ensures the value entered by the end user does not contain any malicious content
+
 ```js
-import { Utils } from "react-minimalist-utils";
+import { Utils } from "react-utils";
 
 const dirtyHTML = <p>This is dirty HTML</p>;
 const htmlText = Utils.String.sanitizeHTML(dirtyHTML);
@@ -423,8 +480,10 @@ const htmlText = Utils.String.sanitizeHTML(dirtyHTML);
 
 #### trimText
 
+`trimText` trims text with ellipsis
+
 ```js
-import { Utils } from "react-minimalist-utils";
+import { Utils } from "react-utils";
 
 const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 const newText = Utils.String.trimText(text, 50);

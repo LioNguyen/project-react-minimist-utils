@@ -1,12 +1,23 @@
 {
-  "name": "react-minimalist-utils",
+  "name": "react-utils",
   "version": "0.0.0",
+  "author": "Lio Nguyen",
+  "email": "lio.nguyen.dev@gmail.com",
+  "homepage": "https://github.com/LioNguyen/project-react-utils/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LioNguyen/project-react-utils"
+  },
+  "keywords": [
+    "react",
+    "utils"
+  ],
   "type": "module",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/react-minimalist-utils.cjs",
-      "import": "./dist/react-minimalist-utils.es.js"
+      "require": "./dist/react-utils.cjs",
+      "import": "./dist/react-utils.es.js"
     },
     "./styles.css": {
       "require": "./dist/styles.css",
@@ -16,12 +27,6 @@
   "files": [
     "dist"
   ],
-  "email": "lio.nguyen.dev@gmail.com",
-  "homepage": "https://github.com/LioNguyen/project-react-minimalist-utils",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/LioNguyen/project-react-minimalist-utils"
-  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

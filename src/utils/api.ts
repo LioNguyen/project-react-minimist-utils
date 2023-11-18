@@ -4,7 +4,7 @@
  * @param failureCallback optional
  * @param getLoadingState optional to get loading state when call api
  * @param showLog optional to show log when call api
- * @description this function utilizes fetch data method from api
+ * @description utilizes fetch data method from api
  */
 export const fetchData = async ({
   requestCallback,

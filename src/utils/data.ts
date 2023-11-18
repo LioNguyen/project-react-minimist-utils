@@ -4,7 +4,10 @@ export const DOWNLOAD_LINK_SAMPLE =
 /**
  * @description handle download a file from specific url
  */
-export function downloadFile(downloadUrl: string, fileName: string = "file") {
+export function downloadFile(
+  downloadUrl: string,
+  fileName: string = "downloadFile"
+) {
   const a = document.createElement("a");
 
   a.setAttribute("href", downloadUrl);

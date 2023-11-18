@@ -3,7 +3,7 @@ import { useEventListener } from "./useDom";
 
 /**
  * @returns boolean
- * @description check window is scrolling or not
+ * @description check whether window is scrolling or not
  */
 export function useScrolling() {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -35,6 +35,7 @@ export function useScrollTo() {
   };
 
   const scrollTo = (top?: number, left?: number) => {
+    if (!window) return;
     window.scrollTo({
       top: top || 0,
       left: left || 0,
@@ -42,7 +43,25 @@ export function useScrollTo() {
     });
   };
 
-  return { scrollToElement, scrollTo };
+  const scrollToTop = () => {
+    if (!window) return;
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToBottom = () => {
+    if (!window || !document) return;
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  return { scrollToElement, scrollTo, scrollToTop, scrollToBottom };
 }
 
 /**

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 /**
  * @returns object {isMobile}
- * @description detect which device you are using
+ * @description detect whether your device is mobile or not
  */
 export function useDeviceDetect() {
   const [isMobile, setMobile] = useState<boolean | undefined>(undefined);

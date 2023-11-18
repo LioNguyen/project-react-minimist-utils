@@ -1,6 +1,3 @@
-export * from "./useArray";
-export * as Array from "./useArray";
-
 export * from "./useData";
 export * as Data from "./useData";
 

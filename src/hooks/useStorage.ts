@@ -1,9 +1,19 @@
 import { useCallback, useState, useEffect } from "react";
 
+/**
+ * @param key
+ * @param defaultValue key's value
+ * @description helps to store data in localStorage
+ */
 export function useLocalStorage(key: any, defaultValue: any) {
   return useStorage(key, defaultValue, window.localStorage);
 }
 
+/**
+ * @param key
+ * @param defaultValue key's value
+ * @description helps to store data in sessionStorage
+ */
 export function useSessionStorage(key: any, defaultValue: any) {
   return useStorage(key, defaultValue, window.sessionStorage);
 }
