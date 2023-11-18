@@ -9,9 +9,10 @@ export default defineConfig(() => ({
   build: {
     lib: {
       entry: resolve("src", "index.ts"),
-      name: "react-utils",
+      name: "react-minimist-utils",
       formats: ["es", "cjs"],
-      fileName: (format) => `react-utils.${format === "cjs" ? "cjs" : "es.js"}`,
+      fileName: (format) =>
+        `react-minimist-utils.${format === "cjs" ? "cjs" : "es.js"}`,
     },
     optimizeDeps: {
       exclude: Object.keys(packageJson.peerDependencies),

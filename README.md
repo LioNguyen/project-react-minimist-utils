@@ -1,10 +1,10 @@
 # React Utils
 
-[![npm](https://img.shields.io/npm/v/react-utils?color=%23ff00dd)](https://www.npmjs.com/package/react-utils)
-[![npm downloads](https://img.shields.io/npm/dw/react-utils)](https://www.npmjs.com/package/react-utils)
-![types](https://img.shields.io/npm/types/react-utils)
+[![npm](https://img.shields.io/npm/v/react-minimist-utils?color=%23ff00dd)](https://www.npmjs.com/package/react-minimist-utils)
+[![npm downloads](https://img.shields.io/npm/dw/react-minimist-utils)](https://www.npmjs.com/package/react-minimist-utils)
+![types](https://img.shields.io/npm/types/react-minimist-utils)
 
-🚀 `react-utils` is a bundle of essential packages and utils in Typescript for a React application
+🚀 `react-minimist-utils` is a bundle of essential packages and utils in Typescript for a React application
 
 `React + TypeScript + Vite`
 
@@ -14,7 +14,7 @@ Older version [minimist-react-library](https://www.npmjs.com/package/minimist-re
 
 <b>Table of Contents</b>
 
-- [React Utils](#react-utils)
+- [React Utils](#react-minimist-utils)
   - [Installation](#installation)
   - [Playground](#playground)
   - [Constants](#constants)
@@ -66,7 +66,7 @@ Older version [minimist-react-library](https://www.npmjs.com/package/minimist-re
 ## Installation
 
 ```bash
-npm i react-utils
+npm i react-minimist-utils
 ```
 
 Some extra essential packages:
@@ -94,7 +94,7 @@ npm i react-router-dom
 ### EMAIL_REGEX
 
 ```js
-import { CONSTANTS } from "react-utils";
+import { CONSTANTS } from "react-minimist-utils";
 
 const regex = CONSTANTS.EMAIL_REGEX;
 
@@ -104,7 +104,7 @@ const regex = CONSTANTS.EMAIL_REGEX;
 ### HEX_COLOR_REGEX
 
 ```js
-import { CONSTANTS } from "react-utils";
+import { CONSTANTS } from "react-minimist-utils";
 
 const regex = CONSTANTS.HEX_COLOR_REGEX;
 
@@ -114,7 +114,7 @@ const regex = CONSTANTS.HEX_COLOR_REGEX;
 ### HTTP_HTTPS_REGEX
 
 ```js
-import { CONSTANTS } from "react-utils";
+import { CONSTANTS } from "react-minimist-utils";
 
 const regex = CONSTANTS.HTTP_HTTPS_REGEX;
 
@@ -124,7 +124,7 @@ const regex = CONSTANTS.HTTP_HTTPS_REGEX;
 ### PASSWORD_REGEX
 
 ```js
-import { CONSTANTS } from "react-utils";
+import { CONSTANTS } from "react-minimist-utils";
 
 const regex = CONSTANTS.PASSWORD_REGEX;
 
@@ -134,7 +134,7 @@ const regex = CONSTANTS.PASSWORD_REGEX;
 ### UUID_REGEX
 
 ```js
-import { CONSTANTS } from "react-utils";
+import { CONSTANTS } from "react-minimist-utils";
 
 const regex = CONSTANTS.UUID_REGEX;
 
@@ -144,7 +144,7 @@ const regex = CONSTANTS.UUID_REGEX;
 ### VIETNAMESE_PHONE_NUMBER_REGEX
 
 ```js
-import { CONSTANTS } from "react-utils";
+import { CONSTANTS } from "react-minimist-utils";
 
 const regex = CONSTANTS.VIETNAMESE_PHONE_NUMBER_REGEX;
 
@@ -156,25 +156,25 @@ const regex = CONSTANTS.VIETNAMESE_PHONE_NUMBER_REGEX;
 ### [clsx](https://www.npmjs.com/package/clsx)
 
 ```js
-import { Clsx, ClsxType } from "react-utils";
+import { Clsx, ClsxType } from "react-minimist-utils";
 ```
 
 ### [dompurify](https://www.npmjs.com/package/dompurify)
 
 ```js
-import { dompurify, DOMPurify, DompurifyType } from "react-utils";
+import { dompurify, DOMPurify, DompurifyType } from "react-minimist-utils";
 ```
 
 ### [lodash](https://www.npmjs.com/package/lodash)
 
 ```js
-import { _, Lodash, LodashType } from "react-utils";
+import { _, Lodash, LodashType } from "react-minimist-utils";
 ```
 
 ### [qs](https://www.npmjs.com/package/qs)
 
 ```js
-import { qs, qsType } from "react-utils";
+import { qs, qsType } from "react-minimist-utils";
 ```
 
 ## Hooks
@@ -186,7 +186,7 @@ import { qs, qsType } from "react-utils";
 `useToggle` allows a component to toggle a value between true and false
 
 ```js
-import { Hooks } from "react-utils";
+import { Hooks } from "react-minimist-utils";
 
 const [value, toggleValue] = Hooks.Data.useToggle(false);
 
@@ -206,7 +206,7 @@ return (
 `useDeviceDetect` detects whether your device is mobile or not
 
 ```js
-import { Hooks } from "react-utils";
+import { Hooks } from "react-minimist-utils";
 
 const { isMobile } = Hooks.Device.useDeviceDetect();
 ```
@@ -218,7 +218,7 @@ const { isMobile } = Hooks.Device.useDeviceDetect();
 `useElementOnScreen` checks whether a specific DOM element comes into view or goes out of sight
 
 ```js
-import { Hooks } from "react-utils";
+import { Hooks } from "react-minimist-utils";
 
 const buttonRef = useRef();
 const isVisible = Hooks.Dom.useElementOnScreen(buttonRef);
@@ -229,7 +229,7 @@ const isVisible = Hooks.Dom.useElementOnScreen(buttonRef);
 `useEventListener` helpful in situations where you want to handle events
 
 ```js
-import { Hooks } from "react-utils";
+import { Hooks } from "react-minimist-utils";
 
 Hooks.Dom.useEventListener("scroll", callback);
 ```
@@ -241,7 +241,7 @@ Hooks.Dom.useEventListener("scroll", callback);
 `useLocalStorage, useSessionStorage` helps to store data in Local Storage or Session Storage
 
 ```js
-import { Hooks } from "react-utils";
+import { Hooks } from "react-minimist-utils";
 
 const [name, setName, removeName] = Hooks.Storage.useSessionStorage(
   "name",
@@ -257,7 +257,7 @@ const [age, setAge, removeAge] = Hooks.Storage.useLocalStorage("age", 26);
 `useScrolling` checks whether window is scrolling or not
 
 ```js
-import { Hooks } from "react-utils";
+import { Hooks } from "react-minimist-utils";
 
 const isScrolling = Hooks.Window.useScrolling();
 ```
@@ -267,7 +267,7 @@ const isScrolling = Hooks.Window.useScrolling();
 `useScrollTo` helps scroll to element or specific position
 
 ```js
-import { Hooks } from "react-utils";
+import { Hooks } from "react-minimist-utils";
 
 const buttonRef = useRef();
 const { scrollToElement, scrollTo, scrollToTop, scrollToBottom } =
@@ -286,7 +286,7 @@ scrollToBottom();
 `useWindowSize` helps to get current window's height and width
 
 ```js
-import { Hooks } from "react-utils";
+import { Hooks } from "react-minimist-utils";
 
 const { width, height } = Hooks.Window.useWindowSize();
 ```
@@ -300,7 +300,7 @@ const { width, height } = Hooks.Window.useWindowSize();
 `fetchData` utilizes fetch data method from api
 
 ```js
-import { Utils } from "react-utils";
+import { Utils } from "react-minimist-utils";
 
 Utils.Api.fetchData({
   requestCallback: async () => {
@@ -330,7 +330,7 @@ Utils.Api.fetchData({
 `handleArray` helps to push, filter, update, remove, clear a list
 
 ```js
-import { Utils } from "react-utils";
+import { Utils } from "react-minimist-utils";
 
 // or Utils.handleArray
 const arr = [1, 2, 3];
@@ -345,7 +345,7 @@ clear(); // -> arr = []
 `groupListByField` handle group list by specific field
 
 ```js
-import { Utils } from "react-utils";
+import { Utils } from "react-minimist-utils";
 
 const list = Utils.Array.groupListByField({
   list: mockList,
@@ -358,7 +358,7 @@ const list = Utils.Array.groupListByField({
 `sortList` only works on number list, string list & object list
 
 ```js
-import { Utils } from "react-utils";
+import { Utils } from "react-minimist-utils";
 
 const data = Utils.Array.sortList({
   list: mockList,
@@ -374,7 +374,7 @@ const data = Utils.Array.sortList({
 `downloadFile` handles download a file from specific url
 
 ```js
-import { Utils } from "react-utils";
+import { Utils } from "react-minimist-utils";
 
 const { downloadFile, DOWNLOAD_LINK_SAMPLE } = Utils.Data;
 
@@ -388,7 +388,7 @@ downloadFile(DOWNLOAD_LINK_SAMPLE);
 `numberWithComma` formats number with dot and comma
 
 ```js
-import { Utils } from "react-utils";
+import { Utils } from "react-minimist-utils";
 
 const formattedNumber = Utils.Number.numberWithComma(55250.2);
 
@@ -403,7 +403,7 @@ const formattedNumber = Utils.Number.numberWithComma(55250.2);
 
 ```js
 // ./Button/index.ts
-import { Utils } from "react-utils";
+import { Utils } from "react-minimist-utils";
 
 const Button = Utils.lazyLoad(
   () => import("./Button"),
@@ -429,7 +429,7 @@ export const App = () => {
 `checkWordCount` checks whether text length meets requirement or not
 
 ```js
-import { Utils } from "react-utils";
+import { Utils } from "react-minimist-utils";
 
 const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 const isTextValid = Utils.String.checkWordCount(text, 5, 30);
@@ -442,7 +442,7 @@ const isTextValid = Utils.String.checkWordCount(text, 5, 30);
 `convertHexToRgb` converts HEX to RGBA color
 
 ```js
-import { Utils } from "react-utils";
+import { Utils } from "react-minimist-utils";
 
 const formattedNumber = Utils.String.numberWithComma(55250.2);
 
@@ -454,7 +454,7 @@ const formattedNumber = Utils.String.numberWithComma(55250.2);
 `convertStyleObjectToString` converts css object into css string to use in styled-components template string
 
 ```js
-import { Utils } from "react-utils";
+import { Utils } from "react-minimist-utils";
 
 const styleObject = {
   color: "#000",
@@ -470,7 +470,7 @@ const cssString = Utils.String.convertStyleObjectToString(styleObject);
 `sanitizeHTML` ensures the value entered by the end user does not contain any malicious content
 
 ```js
-import { Utils } from "react-utils";
+import { Utils } from "react-minimist-utils";
 
 const dirtyHTML = <p>This is dirty HTML</p>;
 const htmlText = Utils.String.sanitizeHTML(dirtyHTML);
@@ -483,7 +483,7 @@ const htmlText = Utils.String.sanitizeHTML(dirtyHTML);
 `trimText` trims text with ellipsis
 
 ```js
-import { Utils } from "react-utils";
+import { Utils } from "react-minimist-utils";
 
 const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 const newText = Utils.String.trimText(text, 50);
