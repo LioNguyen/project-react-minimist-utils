@@ -3,48 +3,58 @@ import _ from "lodash";
 /**
  * @param list any[]
  * @returns objects of function to handle a list
+ * @returns push: push element into list,
+ * @returns filter: filter list by callback,
+ * @returns update: update element at index,
+ * @returns remove: remove element at index,
+ * @returns clear: clear list
  */
+
 export function handleArray(list: any[]) {
   return {
     /**
      * @param element any
-     * @returns void
+     * @returns new list
      * @description push element into list
      */
     push(element: any) {
-      list.push(element);
+      list.push(...element);
+      return list;
     },
     /**
      * @param callback any
-     * @returns void
+     * @returns new list
      * @description filter list by callback
      */
     filter(callback: any) {
-      list.filter(callback);
+      return list.filter(callback);
     },
     /**
      * @param index number
      * @param newElement any
-     * @returns void
+     * @returns new list
      * @description update element at index
      */
     update(index: number, newElement: any) {
       list[index] = newElement;
+      return list;
     },
     /**
      * @param index number
-     * @returns void
+     * @returns new list
      * @description remove element at index
      */
     remove(index: number) {
       list.splice(index, 1);
+      return list;
     },
     /**
-     * @returns void
+     * @returns new list
      * @description clear list
      */
     clear() {
       list.splice(0, list.length);
+      return list;
     },
   };
 }

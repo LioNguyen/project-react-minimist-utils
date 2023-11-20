@@ -65,17 +65,68 @@ export function useScrollTo() {
 }
 
 /**
- * @returns object {width, height}
+ * @param selectorString string
+ * @returns object {top, left, isElementInView}
+ * @description helpful in situations where you want to check position of specific element
+ */
+export function useElementPosition(selectorString?: string) {
+  const [elementPosition, setElementPosition] = useState({
+    top: 0,
+    left: 0,
+    isElementInView: false,
+  });
+  const element = selectorString
+    ? document.querySelector(selectorString)
+    : null;
+  const rect = element ? element.getBoundingClientRect() : null;
+
+  const isElementInView =
+    rect &&
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+
+  useEventListener("scroll", () => {
+    if (!element || !rect) return;
+    setElementPosition({
+      ...elementPosition,
+      top: rect.top,
+      left: rect.left,
+      isElementInView: isElementInView || false,
+    });
+  });
+
+  return elementPosition;
+}
+
+/**
+ * @returns object {width, height, scrollX, scrollY}
  * @description helpful in situations where you want to make a responsive design
  */
 export function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
     height: window.innerHeight,
+    width: window.innerWidth,
+    scrollX: window.scrollX,
+    scrollY: window.scrollY,
   });
 
   useEventListener("resize", () => {
-    setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    setWindowSize({
+      ...windowSize,
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  });
+
+  useEventListener("scroll", () => {
+    setWindowSize({
+      ...windowSize,
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
   });
 
   return windowSize;

@@ -1,4 +1,4 @@
-# React Utils
+# React Minimist Utils
 
 [![npm](https://img.shields.io/npm/v/react-minimist-utils?color=%23ff00dd)](https://www.npmjs.com/package/react-minimist-utils)
 [![npm downloads](https://img.shields.io/npm/dw/react-minimist-utils)](https://www.npmjs.com/package/react-minimist-utils)
@@ -10,11 +10,13 @@
 
 Older version [minimist-react-library](https://www.npmjs.com/package/minimist-react-library)
 
+<i><b>Get full template to create react app</b>: [React Minimist Boilerplate](https://github.com/LioNguyen/project-react-minimist-boilerplate)</i>
+
 ---
 
 <b>Table of Contents</b>
 
-- [React Utils](#react-minimist-utils)
+- [React Minimist Utils](#react-minimist-utils)
   - [Installation](#installation)
   - [Playground](#playground)
   - [Constants](#constants)
@@ -42,6 +44,7 @@ Older version [minimist-react-library](https://www.npmjs.com/package/minimist-re
     - [Window](#window)
       - [useScrolling](#usescrolling)
       - [useScrollTo](#usescrollto)
+      - [useElementPosition](#useelementposition)
       - [useWindowSize](#usewindowsize)
   - [Utils:](#utils)
     - [Api](#api)
@@ -281,14 +284,24 @@ scrollToTop();
 scrollToBottom();
 ```
 
-#### useWindowSize
+#### useElementPosition
 
-`useWindowSize` helps to get current window's height and width
+`useElementPosition` helps to get position of specific element
 
 ```js
 import { Hooks } from "react-minimist-utils";
 
-const { width, height } = Hooks.Window.useWindowSize();
+const { top, left, isElementInView } = Hooks.Window.useElementPosition(".btn"); // or Hooks.useElementPosition()
+```
+
+#### useWindowSize
+
+`useWindowSize` helps to get current window's height, width, scrollX and scrollY
+
+```js
+import { Hooks } from "react-minimist-utils";
+
+const { height, width, scrollX, scrollY } = Hooks.Window.useWindowSize(); // or Hooks.useWindowSize()
 ```
 
 ## Utils:
@@ -332,12 +345,24 @@ Utils.Api.fetchData({
 ```js
 import { Utils } from "react-minimist-utils";
 
-// or Utils.handleArray
 const arr = [1, 2, 3];
-const { push, filter, update, remove, clear } = Utils.Array.handleArray(arr);
 
-push(4); // -> arr = [1,2,3,4,5]
-clear(); // -> arr = []
+const { push, filter, update, remove, clear } = Utils.Array.handleArray(arr); // or Utils.handleArray
+
+const arrPush = push([7, 8, 9]);
+// arrPush = [1, 2, 3, 7, 8, 9]
+
+const arrRemove = remove(2);
+// arrRemove = [1, 2, 7, 8, 9]
+
+const arrFilter = filter((item: number) => item > 5);
+// arrFilter = [7, 8, 9]
+
+const arrUpdate = update(0, 100);
+// arrUpdate = [100, 1, 2, 3, 7, 8, 9]
+
+const arrClear = clear();
+// arrClear = []
 ```
 
 #### groupListByField
