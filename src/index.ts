@@ -1,30 +1,41 @@
 import * as CONSTANTS from "@/constants";
-import * as Hooks from "@/hooks";
-import * as Utils from "@/utils";
+import * as Hooks from "@/core/hooks";
+import * as Utils from "@/core/utils";
 
-import type * as ClsxType from "clsx";
-import * as Clsx from "clsx";
+/* ---------- Constants Export ---------- */
+export { CONSTANTS };
 
-import type * as DompurifyType from "dompurify";
-import dompurify, * as Dompurify from "dompurify";
-import type * as LodashType from "lodash";
-import _, * as Lodash from "lodash";
-import type * as qsType from "qs";
-import * as qs from "qs";
+/* ---------- Hooks Export ---------- */
+export { Hooks };
 
-/* ---------- Library Export ---------- */
+// Export all hooks individually
+export { useToggle } from "@/core/hooks/useData";
+export { useDebounce, useDebouncedCallback } from "@/core/hooks/useDebounce";
+export { useDeviceDetect } from "@/core/hooks/useDevice";
+export { useElementOnScreen, useEventListener } from "@/core/hooks/useDom";
+export { usePrevious } from "@/core/hooks/usePrevious";
+export { useLocalStorage, useSessionStorage } from "@/core/hooks/useStorage";
 export {
-  _,
-  Lodash,
-  LodashType,
-  Clsx,
-  ClsxType,
-  dompurify,
-  Dompurify,
-  DompurifyType,
-  qs,
-  qsType,
-};
+  useScrolling,
+  useScrollTo,
+  useElementPosition,
+  useWindowSize,
+} from "@/core/hooks/useWindow";
 
-/* ---------- Hooks, Utils Export ---------- */
-export { CONSTANTS, Hooks, Utils };
+/* ---------- Utils Export ---------- */
+export { Utils };
+
+// Export all utils individually
+export { cn } from "@/core/utils/cn";
+export { fetchData } from "@/core/utils/api";
+export { handleArray, groupListByField, sortList } from "@/core/utils/array";
+export { downloadFile, DOWNLOAD_LINK_SAMPLE } from "@/core/utils/data";
+export { numberWithComma } from "@/core/utils/number";
+export { lazyLoad } from "@/core/utils/lazyLoad";
+export {
+  checkWordCount,
+  convertHexToRgb,
+  convertStyleObjectToString,
+  sanitizeHTML,
+  trimText,
+} from "@/core/utils/string";

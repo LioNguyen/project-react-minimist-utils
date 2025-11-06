@@ -10,8 +10,8 @@ export * as Data from "./data";
 export * from "./number";
 export * as Number from "./number";
 
-export * from "./react";
-export * as React from "./react";
+export * from "./lazyLoad";
+export * as React from "./lazyLoad";
 
 export * from "./string";
 export * as String from "./string";
