@@ -9,10 +9,10 @@ export { CONSTANTS };
 export { Hooks };
 
 // Export all hooks individually
-export { useToggle } from "@/core/hooks/useData";
-export { useDebounce, useDebouncedCallback } from "@/core/hooks/useDebounce";
+export { useToggle } from "@/core/hooks/useToggle";
+export { useDebounce, useDebouncedCallback } from "@/core/hooks/debounce";
 export { useDeviceDetect } from "@/core/hooks/useDevice";
-export { useElementOnScreen, useEventListener } from "@/core/hooks/useDom";
+export { useElementOnScreen, useEventListener } from "@/core/hooks/dom";
 export { usePrevious } from "@/core/hooks/usePrevious";
 export { useLocalStorage, useSessionStorage } from "@/core/hooks/useStorage";
 export {
@@ -20,7 +20,25 @@ export {
   useScrollTo,
   useElementPosition,
   useWindowSize,
-} from "@/core/hooks/useWindow";
+  useResponsive,
+  useBreakpoint,
+  useMediaQuery,
+} from "@/core/hooks/window";
+export { useAppContext } from "@/core/hooks/useAppContext";
+export { useBaseAPI, memoryCache } from "@/core/hooks/api/useBaseAPI";
+
+/* ---------- Components Export ---------- */
+export { APIProvider, useAPIConfig } from "@/core/components/APIProvider";
+
+/* ---------- Types Export ---------- */
+export type {
+  ApiStatus,
+  RequestOptions,
+  EndpointConfig,
+  APIConfig,
+  CacheEntry,
+  APIRequestConfig,
+} from "@/core/domains";
 
 /* ---------- Utils Export ---------- */
 export { Utils };

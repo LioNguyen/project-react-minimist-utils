@@ -1,14 +1,14 @@
-export * from "./useData";
-export * as Data from "./useData";
+export * from "./useToggle";
+export * as Data from "./useToggle";
 
-export * from "./useDebounce";
-export * as Debounce from "./useDebounce";
+export * from "./debounce";
+export * as Debounce from "./debounce";
 
 export * from "./useDevice";
 export * as Device from "./useDevice";
 
-export * from "./useDom";
-export * as Dom from "./useDom";
+export * from "./dom";
+export * as Dom from "./dom";
 
 export * from "./usePrevious";
 export * as Previous from "./usePrevious";
@@ -16,5 +16,7 @@ export * as Previous from "./usePrevious";
 export * from "./useStorage";
 export * as Storage from "./useStorage";
 
-export * from "./useWindow";
-export * as Window from "./useWindow";
+export * from "./window";
+export * as Window from "./window";
+
+export * from "./useAppContext";
